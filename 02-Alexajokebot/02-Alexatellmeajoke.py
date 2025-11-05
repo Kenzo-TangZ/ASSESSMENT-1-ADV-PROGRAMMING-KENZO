@@ -1,5 +1,4 @@
 import random
-import os
 
 def readjokes(name):
     jokes = []
@@ -19,11 +18,11 @@ def displayjoke(joke_list):
     print(answer + "\n")
 
 def alexajokebot():
-    jokespath = os.path.join(os.path.dirname(__file__), "jok.txt")
+    jokespath = "jok.txt"
     alljokes = readjokes(jokespath)
 
     while True:
-        user_input = input("Type 'Alexa tell me a joke' or 'quit' to leave: ").strip().lower()
+        user_input = input("Type 'Alexa tell me a joke' or 'quit' to leave: ").lower().strip()
 
         if user_input == "alexa tell me a joke":
             displayjoke(alljokes)
@@ -33,4 +32,4 @@ def alexajokebot():
         else:
             print("\nPlease only type 'Alexa tell me a joke' or 'quit'.\n")
 
-alexajokebot()
+alexajokebot() 
