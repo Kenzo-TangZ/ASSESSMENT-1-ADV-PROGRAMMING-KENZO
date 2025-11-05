@@ -102,4 +102,4 @@ def MathsQuiz():
             print("Thanks for playing! Goodbye.")
             break 
 
-MathsQuiz()
+MathsQuiz() 
